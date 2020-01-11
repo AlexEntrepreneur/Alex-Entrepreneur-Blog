@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://alexentrepreneur.com`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Yeet.`,
+      heading: ``,
       maxWidth: 652,
     },
     social: [
