@@ -1,34 +1,38 @@
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
+    title: `Alex Entrepreneur`,
+    name: `Alex Entrepreneur`,
+    siteUrl: `https://alexentrepreneur.com`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+      heading: `Yeet.`,
       maxWidth: 652,
     },
     social: [
       {
-        name: `twitter`,
-        url: `https://twitter.com/narative`,
+        name: `youtube`,
+        url: `https://www.youtube.com/channel/UC-B-yg1t30w_G2m5x9P75nQ`,
       },
       {
-        name: `github`,
-        url: `https://github.com/narative`,
+        name: `twitter`,
+        url: `https://twitter.com/alexentrprnr`,
       },
+      // {
+      //   name: `github`,
+      //   url: `https://github.com/narative`,
+      // },
       {
         name: `instagram`,
-        url: `https://instagram.com/narative.co`,
+        url: `https://instagram.com/alexentrepreneur`,
       },
-      {
-        name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
-      },
+      // {
+      //   name: `linkedin`,
+      //   url: `https://www.linkedin.com/company/narative/`,
+      // },
+      // {
+      //   name: `dribbble`,
+      //   url: `https://dribbble.com/narativestudio`,
+      // },
     ],
   },
   plugins: [
