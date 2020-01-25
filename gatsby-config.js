@@ -11,7 +11,7 @@ module.exports = {
     social: [
       {
         name: `youtube`,
-        url: `https://www.youtube.com/channel/UC-B-yg1t30w_G2m5x9P75nQ`,
+        url: `https://www.youtube.com/channel/UCaA-t-VlLLsewMkkCCy-CRg`,
       },
       {
         name: `twitter`,
