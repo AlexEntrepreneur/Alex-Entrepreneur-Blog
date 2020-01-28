@@ -10,7 +10,6 @@ const fonts = {
 
 export default {
   ...novelaTheme,
-  initialColorMode: 'dark',
   colors,
   fonts
 };
