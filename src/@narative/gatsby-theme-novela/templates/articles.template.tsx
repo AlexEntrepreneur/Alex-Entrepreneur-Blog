@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import { Global } from "@emotion/core";
 
 import { globalStyles } from "@narative/gatsby-theme-novela/src/styles/global";
-import mediaqueries from '@narative/gatsby-theme-novela/src/styles/media';
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
 import SEO from "@narative/gatsby-theme-novela/src/components/SEO";
 import Paginator from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Paginator";
 import Section from "@narative/gatsby-theme-novela/src/components/Section";
@@ -12,7 +11,8 @@ import ArticlesContextProvider from "@narative/gatsby-theme-novela/src/sections/
 
 import { Template } from "@narative/gatsby-theme-novela/src/types";
 import ArticlesList from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List";
-import NavigationHeader from '@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header';
+import NavigationHeader from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header";
+import NavigationFooter from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Footer";
 
 const HomePage: Template = ({ location, pageContext }) => {
   const articles = pageContext.group;
@@ -20,22 +20,24 @@ const HomePage: Template = ({ location, pageContext }) => {
 
   return (
     <ArticlesContextProvider>
-      <HomePageContainer>
-        <NavigationHeader />
-        <HomePageContentContainer>
-          <HeroHeading>First principles, business & other stuff.</HeroHeading>
-          <ButtonsContainer>
-            <Link to={`${authors[0].slug}`}>
-              <Button large>About Me</Button>
-            </Link>
-            <a href={`${authors[0].social[1].url}`} target="_blank">
-              <Button primary large>Work With Me</Button>
-            </a>
-          </ButtonsContainer>
-        </HomePageContentContainer>
-      </HomePageContainer>
       <Container>
         <Global styles={globalStyles} />
+        <HomePageContainer>
+          <NavigationHeader />
+          <HomePageContentContainer>
+            <HeroHeading>First principles, business & other stuff.</HeroHeading>
+            <ButtonsContainer>
+              <a href={`${authors[0].social[1].url}`} target="_blank">
+                <Button large>About Me</Button>
+              </a>
+              <a href={`${authors[0].social[1].url}`} target="_blank">
+                <Button primary large>
+                  Work With Me
+                </Button>
+              </a>
+            </ButtonsContainer>
+          </HomePageContentContainer>
+        </HomePageContainer>
         <SEO pathname={location.pathname} />
         <Section narrow>
           <ArticlesList articles={articles} />
@@ -43,6 +45,7 @@ const HomePage: Template = ({ location, pageContext }) => {
             <Paginator {...pageContext} />
           </ArticlesPaginator>
         </Section>
+        <NavigationFooter />
       </Container>
     </ArticlesContextProvider>
   );
