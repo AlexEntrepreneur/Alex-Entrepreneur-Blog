@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import { Global } from "@emotion/core";
 
@@ -17,6 +17,12 @@ import NavigationFooter from "@narative/gatsby-theme-novela/src/components/Navig
 const HomePage: Template = ({ location, pageContext }) => {
   const articles = pageContext.group;
   const authors = pageContext.additionalContext.authors;
+
+  useEffect(() => {
+    // Default articles layout to list
+    localStorage.setItem('gridLayout', 'rows');
+  }, []);
+  
 
   return (
     <ArticlesContextProvider>
