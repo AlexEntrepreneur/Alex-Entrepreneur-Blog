@@ -17,10 +17,10 @@ module.exports = {
         name: `twitter`,
         url: `https://twitter.com/alexentrprnr`,
       },
-      // {
-      //   name: `github`,
-      //   url: `https://github.com/narative`,
-      // },
+      {
+        name: `github`,
+        url: `https://github.com/alexentrepreneur`,
+      },
       {
         name: `instagram`,
         url: `https://instagram.com/alexentrepreneur`,
