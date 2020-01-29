@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "@emotion/styled";
+import { graphql, useStaticQuery } from "gatsby";
 import { Global } from "@emotion/core";
 
 import { globalStyles } from "@narative/gatsby-theme-novela/src/styles/global";
@@ -13,11 +14,31 @@ import { Template } from "@narative/gatsby-theme-novela/src/types";
 import ArticlesList from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List";
 import NavigationHeader from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header";
 import NavigationFooter from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Footer";
+import SocialLinks from "@narative/gatsby-theme-novela/src/components/SocialLinks";
+
+const siteQuery = graphql`
+  {
+    allSite {
+      edges {
+        node {
+          siteMetadata {
+            social {
+              url
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const HomePage: Template = ({ location, pageContext }) => {
+  const results = useStaticQuery(siteQuery);
+  const { social } = results.allSite.edges[0].node.siteMetadata;
   const articles = pageContext.group;
   const authors = pageContext.additionalContext.authors;
-
+  
   return (
     <ArticlesContextProvider>
       <Container>
@@ -36,6 +57,9 @@ const HomePage: Template = ({ location, pageContext }) => {
                 </Button>
               </a>
             </ButtonsContainer>
+            <div>
+              <SocialLinks links={social} />
+            </div>
           </HomePageContentContainer>
         </HomePageContainer>
         <SEO pathname={location.pathname} />
