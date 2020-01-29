@@ -21,6 +21,8 @@ const HomePage: Template = ({ location, pageContext }) => {
   useEffect(() => {
     // Default articles layout to list
     localStorage.setItem('gridLayout', 'rows');
+    // Default theme to dark mode
+    localStorage.setItem('theme-ui-color-mode', 'dark');
   }, []);
   
 
@@ -60,7 +62,7 @@ const HomePage: Template = ({ location, pageContext }) => {
 const Container = styled.div`
   position: relative;
   background: ${p => p.theme.colors.background};
-  /* transition: ${p => p.theme.colorModeTransition}; */
+  transition: ${p => p.theme.colorModeTransition};
   min-height: 100vh;
 `;
 
