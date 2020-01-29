@@ -38,7 +38,15 @@ const HomePage: Template = ({ location, pageContext }) => {
   const { social } = results.allSite.edges[0].node.siteMetadata;
   const articles = pageContext.group;
   const authors = pageContext.additionalContext.authors;
+
+  useEffect(() => {
+    // Default articles layout to list
+    localStorage.setItem('gridLayout', 'rows');
+    // Default theme to dark mode
+    localStorage.setItem('theme-ui-color-mode', 'dark');
+  }, []);
   
+
   return (
     <ArticlesContextProvider>
       <Container>
@@ -78,7 +86,7 @@ const HomePage: Template = ({ location, pageContext }) => {
 const Container = styled.div`
   position: relative;
   background: ${p => p.theme.colors.background};
-  /* transition: ${p => p.theme.colorModeTransition}; */
+  transition: ${p => p.theme.colorModeTransition};
   min-height: 100vh;
 `;
 
