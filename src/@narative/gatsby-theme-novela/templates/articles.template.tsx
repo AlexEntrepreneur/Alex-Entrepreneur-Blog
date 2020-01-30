@@ -3,18 +3,20 @@ import styled from "@emotion/styled";
 import { graphql, useStaticQuery } from "gatsby";
 import { Global } from "@emotion/core";
 
-import { globalStyles } from "@narative/gatsby-theme-novela/src/styles/global";
-import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
-import SEO from "@narative/gatsby-theme-novela/src/components/SEO";
-import Paginator from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Paginator";
-import Section from "@narative/gatsby-theme-novela/src/components/Section";
-import ArticlesContextProvider from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List.Context";
-
 import { Template } from "@narative/gatsby-theme-novela/src/types";
-import ArticlesList from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List";
+
+import ArticlesContextProvider from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List.Context";
+import SEO from "@narative/gatsby-theme-novela/src/components/SEO";
+import Section from "@narative/gatsby-theme-novela/src/components/Section";
+import Paginator from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Paginator";
 import NavigationHeader from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header";
 import NavigationFooter from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Footer";
 import SocialLinks from "@narative/gatsby-theme-novela/src/components/SocialLinks";
+
+import { globalStyles } from "@narative/gatsby-theme-novela/src/styles/global";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+
+import ArticlesList from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List";
 
 const siteQuery = graphql`
   {
