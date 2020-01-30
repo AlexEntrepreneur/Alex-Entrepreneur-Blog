@@ -181,6 +181,7 @@ const HeroHeading = styled.h1`
   font-size: 42px;
   line-height: 1.15;
   margin-bottom: 40px;
+  z-index: 1;
   color: ${p => p.theme.colors.primary};
 
   a {
