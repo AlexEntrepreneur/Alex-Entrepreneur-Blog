@@ -89,12 +89,12 @@ const HomePage: Template = ({ location, pageContext }) => {
             </HeroEmailSpan>
           </HomePageContentContainer>
         </HomePageContainer>
-        <Section narrow>
+        {/* <Section narrow>
           <ArticlesList articles={articles} />
           <ArticlesPaginator show={pageContext.pageCount > 1}>
             <Paginator {...pageContext} />
           </ArticlesPaginator>
-        </Section>
+        </Section> */}
         <NavigationFooter />
       </Container>
     </ArticlesContextProvider>
@@ -124,17 +124,17 @@ const HomePageContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 200px 0;
+  margin: 200px 0 0 0;
   /* max-width: 1140px; */
   max-width: 860px;
   padding: 0 40px;
 
   ${mediaqueries.desktop`
-    margin: 150px 0;
+    margin: 25% 0 0 0;
   `}
 
   ${mediaqueries.phablet`
-    margin: 100px 0;
+    margin: 40% 0 0 0;
   `}
 `;
 
@@ -198,6 +198,7 @@ const HeroP = styled.p`
   font-size: 18px;
   margin-bottom: 50px;
   color: ${p => p.theme.colors.primary};
+  z-index: 1;
 
   ${mediaqueries.phablet`
     font-size: 16px;
@@ -211,6 +212,7 @@ const A = styled.a`
 `;
 
 const HeroEmailSpan = styled.span`
+  z-index: 1;
   &::before {
     content: '✉️';
     margin-right: 8px;
