@@ -67,7 +67,7 @@ const HomePage: Template = ({ location, pageContext }) => {
             <br />
             <br />
             If you want to level up your business or life{" "}
-            <Link to="/meet">
+            <Link to="/book">
               <Anchor>
                 <b>book a 1:1 session</b>
               </Anchor>{" "}
