@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+
 export const Button = styled.button<{ primary?: boolean, large?: boolean }>`
   padding: 0 20px;
   height: ${props => props.large ? '50px' : '40px'};
@@ -10,6 +12,7 @@ export const Button = styled.button<{ primary?: boolean, large?: boolean }>`
   border: 2px solid  ${props => props.theme.colors.primary};
   background: ${props => props.primary ? props.theme.colors.primary : 'unset'};
   color: ${props => props.primary ? props.theme.colors.secondary : props.theme.colors.primary};
+  z-index: 1;
 
   &:active {
   transform: scale(.98);
