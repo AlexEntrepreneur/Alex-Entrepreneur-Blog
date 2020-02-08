@@ -43,5 +43,5 @@ const TopSection = styled(Section)`
 
 const InfoSection = styled(Section)`
   text-align: center;
-  margin-bottom: 10px;``
+  margin-bottom: 10px;
 `;
