@@ -6,6 +6,7 @@ import { Template } from "@narative/gatsby-theme-novela/src/types";
 
 import Layout from "@narative/gatsby-theme-novela/src/components/Layout";
 import SEO from "@narative/gatsby-theme-novela/src/components/SEO";
+import Anchor from '@narative/gatsby-theme-novela/src/components/Anchor';
 import Section from "@narative/gatsby-theme-novela/src/components/Section";
 import Paginator from "@narative/gatsby-theme-novela/src/components/Navigation/Navigation.Paginator";
 
@@ -54,25 +55,25 @@ const HomePage: Template = ({ location, pageContext }) => {
             creative genius & live a more prosperous life. 🚀
           </HeroHeading>
           <HeroP>
-            <A href={social[0].url} target="_blank">
-              I make videos about first principles
-            </A>
+            <Anchor href={social[0].url} target="_blank">
+              <b>I make videos about first principles</b>
+            </Anchor>
             , tech, money & other topics. I also love to design & build products
             with code in my spare time; keep updated my latest projects{" "}
-            <A href={social[1].url} target="_blank">
-              here
-            </A>
+            <Anchor href={social[1].url} target="_blank">
+              <b>here</b>
+            </Anchor>
             .
             <br />
             <br />
             If you want to level up your business or life{" "}
-            <A href="mailto:hello@alexentrepreneur.com?subject=Re:%201:1%20Mentorship%20Booking">
-              book a 1:1 session
-            </A>{" "}
+            <Anchor href="mailto:hello@alexentrepreneur.com?subject=Re:%201:1%20Mentorship%20Booking">
+              <b>book a 1:1 session</b>
+            </Anchor>{" "}
             with me or{" "}
-            <A href="mailto:hello@alexentrepreneur.com?subject=Re:%20Speaking Engagement">
-              invite me to speak at your event
-            </A>
+            <Anchor href="mailto:hello@alexentrepreneur.com?subject=Re:%20Speaking Engagement">
+              <b>invite me to speak at your event</b>
+            </Anchor>
             . I look forward to meeting you!
           </HeroP>
           <HeroEmailSpan>
@@ -155,12 +156,6 @@ const HeroP = styled.p`
   `}
 `;
 
-const A = styled.a`
-  color: ${p => p.theme.colors.accent};
-  font-weight: bold;
-  text-decoration: underline;
-`;
-
 const HeroEmailSpan = styled.span`
   z-index: 1;
   &::before {
@@ -170,9 +165,10 @@ const HeroEmailSpan = styled.span`
   }
 `;
 
-const HeroEmail = styled(A)`
+const HeroEmail = styled(Anchor)`
   font-size: 18px;
   font-weight: normal;
+  text-decoration: underline;
   color: ${p => p.theme.colors.primary};
   opacity: 0.65;
   ${mediaqueries.phablet`
