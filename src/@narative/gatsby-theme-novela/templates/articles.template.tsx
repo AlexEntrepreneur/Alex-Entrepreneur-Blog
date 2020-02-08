@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "@emotion/styled";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 import { Template } from "@narative/gatsby-theme-novela/src/types";
 
@@ -67,9 +67,11 @@ const HomePage: Template = ({ location, pageContext }) => {
             <br />
             <br />
             If you want to level up your business or life{" "}
-            <Anchor href="mailto:hello@alexentrepreneur.com?subject=Re:%201:1%20Mentorship%20Booking">
-              <b>book a 1:1 session</b>
-            </Anchor>{" "}
+            <Link to="/meet">
+              <Anchor>
+                <b>book a 1:1 session</b>
+              </Anchor>{" "}
+            </Link>
             with me or{" "}
             <Anchor href="mailto:hello@alexentrepreneur.com?subject=Re:%20Speaking Engagement">
               <b>invite me to speak at your event</b>
