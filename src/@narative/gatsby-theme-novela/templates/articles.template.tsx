@@ -73,7 +73,7 @@ const HomePage: Template = ({ location, pageContext }) => {
               </Anchor>{" "}
             </Link>
             with me or{" "}
-            <Anchor href="mailto:hello@alexentrepreneur.com?subject=Re:%20Speaking Engagement">
+            <Anchor href="mailto:hello@alexentrepreneur.com?subject=Alex Entrepreneur Speaking Engagement Enquiry">
               <b>invite me to speak at your event</b>
             </Anchor>
             . I look forward to meeting you!
