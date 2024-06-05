@@ -41,7 +41,7 @@ const HomePage: Template = ({ location, pageContext }) => {
     // Default articles layout to list
     localStorage.setItem('gridLayout', 'rows');
     // Default theme to dark mode
-    localStorage.setItem('theme-ui-color-mode', 'dark');
+    localStorage.setItem('theme-ui-color-mode', 'light');
   }, []);
   
 
@@ -51,32 +51,10 @@ const HomePage: Template = ({ location, pageContext }) => {
       <HomePageContainer>
         <HomePageContentContainer>
           <HeroHeading>
-            Hello! I'm Alex. 👋🏾 I'm on a mission to help you express your
-            creative genius & live a more prosperous life. 🚀
+            Hello! I'm Alex. 👋🏾 I will help you solve your everyday issues and find your inner abundance. 🌱
           </HeroHeading>
           <HeroP>
-            <Anchor href={social[0].url} target="_blank">
-              <b>I make videos about first principles</b>
-            </Anchor>
-            , tech, money & other topics. I also love to design & build products
-            with code in my spare time; keep updated my latest projects{" "}
-            <Anchor href={social[1].url} target="_blank">
-              <b>here</b>
-            </Anchor>
-            .
-            <br />
-            <br />
-            If you want to level up your business or life{" "}
-            <Link to="/book">
-              <Anchor>
-                <b>book a 1:1 session</b>
-              </Anchor>{" "}
-            </Link>
-            with me or{" "}
-            <Anchor href="mailto:hello@alexentrepreneur.com?subject=Alex Entrepreneur Speaking Engagement Enquiry">
-              <b>invite me to speak at your event</b>
-            </Anchor>
-            . I look forward to meeting you!
+            Tech Tools & Strategies For Entrepreneurs & Doers.
           </HeroP>
           <HeroEmailSpan>
             <HeroEmail href="mailto:hello@alexentrepreneur.com">
