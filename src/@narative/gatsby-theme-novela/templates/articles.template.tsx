@@ -51,7 +51,7 @@ const HomePage: Template = ({ location, pageContext }) => {
       <HomePageContainer>
         <HomePageContentContainer>
           <HeroHeading>
-            Hello! I'm Alex. 👋🏾 I will help you solve your everyday issues and find your inner abundance. 🌱
+            Hello! I'm Alex. 👋🏾 I will help you solve your everyday issues and spread your inner abundance. 🌱
           </HeroHeading>
           <HeroP>
             Tech Tools & Strategies For Entrepreneurs & Doers.
